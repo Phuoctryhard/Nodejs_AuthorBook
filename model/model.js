@@ -3,12 +3,12 @@ const mongoose = require("mongoose");
 const authorSchema = new mongoose.Schema({
   name: {
     type: String,
-    required:true
+    required: true,
   },
   year: {
     type: Number,
-    required:true
-},
+    // required:true
+  },
   books: [
     {
       type: mongoose.Schema.Types.ObjectId,
@@ -36,5 +36,5 @@ const bookSchema = new mongoose.Schema({
 
 let Book = mongoose.model("Book", bookSchema);
 let Author = mongoose.model("Author", authorSchema);
-
+// chú ý Book trùng tên  ref: "Book",
 module.exports = { Book, Author };

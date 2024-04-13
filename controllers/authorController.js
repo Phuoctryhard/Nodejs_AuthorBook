@@ -10,6 +10,7 @@ const authorController = {
     } catch (err) {
       res.status(500).json(err); //HTTP REQUEST CODE
     }
+    // res.status(200).json(req.body);
   },
 
   //GET ALL AUTHORS
